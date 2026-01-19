@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <moqui-conf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/moqui-conf-3.xsd">
-    
+    <!--Mount the screen for party entity-->
     <screen-facade>
         <screen location="component://webroot/screen/webroot/apps.xml">
             <subscreens-item name="party" menu-title="PARTY"
                              location="component://party/screen/PartyScreen.xml"/>
         </screen>
+
+
+        <!--Mount the screen for Person entity-->
+        <screen location="component://webroot/screen/webroot/apps.xml">
+            <subscreens-item name="person" menu-title="Person"
+                             location="component://party/screen/PersonScreen.xml"/>
+        </screen>
+
+
+        <!--Mount the screen for PartyGroup entity-->
+        <screen location="component://webroot/screen/webroot/apps.xml">
+            <subscreens-item name="partyGroup" menu-title="Party Group"
+                             location="component://party/screen/PartyGroupScreen.xml"/>
+        </screen>
+
+        <!--Mount the screen for ContactMech entity-->
+        <screen location="component://webroot/screen/webroot/apps.xml">
+            <subscreens-item name="contactMech" menu-title="Contact Mech"
+                             location="component://party/screen/ContactMechScreen.xml"/>
+        </screen>
+
+
+        <!--Mount the screen for PartyContactMech entity-->
+        <screen location="component://webroot/screen/webroot/apps.xml">
+            <subscreens-item name="partyContactMech" menu-title="Party Contact Mech"
+                             location="component://party/screen/PartyContactMechScreen.xml"/>
+        </screen>
+
     </screen-facade>
-    
+
 </moqui-conf>

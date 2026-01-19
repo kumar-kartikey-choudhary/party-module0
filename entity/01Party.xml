@@ -9,24 +9,20 @@
         <field name="createDate" type="date-time"/>
 
         <!--    Enum for partyTypeEnumId  in Party  -->
-        <relationship type="one"   related="Enumeration" >
+        <relationship type="one" title="PartyType"   related="Enumeration" >
             <key-map field-name="partyTypeEnumId"/>
         </relationship>
 
 <!--       A Party has many Person PartyGroup PartyContactMech...
            When deleting Party deletes all the Person, PartyGroup, PartyContactMech...
 -->
-        <relationship type="many" related="Person" on-delete="delete">
-            <key-map field-name="partyId"/>
-        </relationship>
-        <relationship type="many" related="PartyGroup"/>
         <relationship type="many" related="PartyContactMech"/>
 
 
         <seed-data>
             <moqui.basic.EnumerationType description="Party Type" enumTypeId="PartyType"/>
-            <moqui.basic.Enumeration description="Person Data" enumId="PERSON" enumTypeId="PartyType"/>
-            <moqui.basic.Enumeration description="Party Group Data" enumId="PARTY_GROUP" enumTypeId="PartyType"/>
+            <moqui.basic.Enumeration enumId="PERSON" enumTypeId="PartyType"/>
+            <moqui.basic.Enumeration  enumId="PARTY_GROUP" enumTypeId="PartyType"/>
         </seed-data>
     </entity>
 
