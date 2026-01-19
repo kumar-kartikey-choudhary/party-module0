@@ -7,16 +7,16 @@
             <parameter name="partyId" required="true"/>
             <parameter name="firstName" required="true"/>
             <parameter name="lastName" required="true"/>
-            <parameter name="dateOfBirth"/>
+            <parameter name="middleName"/>
+            <parameter name="dateOfBirth" type="Date"/>
         </in-parameters>
         <out-parameters>
-            <parameter name="firstName" />
+            <parameter name="partyId" required="true"/>
         </out-parameters>
         <actions>
-            <entity-make-value entity-name="com.party.Person" value-field="Person"/>
-            <entity-set value-field="Person" include="all"/>
-            <entity-create value-field="Person"/>
+            <entity-make-value entity-name="com.party.Person" value-field="person" map="context"/>
+            <entity-create value-field="person"/>
+            <set field="partyId" from="person.partyId"/>
         </actions>
     </service>
-
 </services>

@@ -4,19 +4,21 @@
 
     <service verb="create" noun="ContactMech" type="inline">
         <in-parameters>
-            <parameter name="contactMechId" required="true"/>
+            <parameter name="contactMechId"/>
             <parameter name="contactMechTypeId" required="true"/>
             <parameter name="infoString" />
             <parameter name="createDate" />
         </in-parameters>
         <out-parameters>
             <parameter name="contactMechId" required="true"/>
-            <parameter name="contactMechTypeId" required="true"/>
         </out-parameters>
         <actions>
-            <entity-make-value entity-name="com.party.ContactMech"  value-field="ContactMech"/>
-            <entity-set value-field="ContactMech" include="all"/>
-            <entity-create value-field="ContactMech"/>
+            <entity-make-value entity-name="com.party.ContactMech" value-field="contactMech" map="context"/>
+            <if condition="!contactMech.contactMechId">
+                <entity-sequenced-id-primary value-field="contactMech"/>
+            </if>
+            <entity-create value-field="contactMech"/>
+            <set field="contactMechId" from="contactMech.contactMechId"/>
         </actions>
     </service>
 </services>
