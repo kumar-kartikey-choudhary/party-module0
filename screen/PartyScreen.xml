@@ -31,7 +31,7 @@
                 <auto-fields-entity entity-name="com.party.Party" field-type="edit"/>
 
                 <field name="partyTypeEnumId">
-                    <default-field title="Party Type">
+                    <default-field title="PartyType">
                         <drop-down>
                            <list-options list="partyList" key="${partyTypeEnumId}"/>
                         </drop-down>

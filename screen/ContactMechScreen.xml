@@ -3,11 +3,31 @@
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd"
         require-authentication="anonymous-all">
 
+    <transition name="contactMech">
+        <service-call name="create#com.party.ContactMech" />
+        <default-response url="."/>
+    </transition>
+
     <actions>
         <!--Entity finds for the screen ContactMech entity-->
         <entity-find entity-name="com.party.ContactMech" list="contactMechList"><search-form-inputs/></entity-find>
     </actions>
     <widgets>
+        <container-dialog id="CreateContactMechDialog" button-text="Create Contact Mech">
+            <form-single name="CreateContactMech" transition="contactMech">
+                <auto-fields-entity entity-name="com.party.ContactMech" field-type="edit"/>
+                <field name="contactMechTypeId">
+                    <default-field title="Contact Mech Type">
+                        <drop-down>
+                            <list-options list="contactMechList" key="${contactMechTypeId}"/>
+                        </drop-down>
+                    </default-field>
+                </field>
+                <field name="submit">
+                    <default-field title="Submit"><submit/></default-field>
+                </field>
+            </form-single>
+        </container-dialog>
 
         <!--Container for the screen ContactMech entity-->
         <container>

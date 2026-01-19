@@ -4,7 +4,7 @@
         require-authentication="anonymous-all">
     <parameter name="partyId" required="true"/>
     <transition name="createPerson">
-        <service-call name="create#Person"/>
+        <service-call name="create#com.party.Person"/>
         <default-response url="."/>
     </transition>
     <actions>
@@ -16,9 +16,11 @@
         <container-dialog id="CreatePersonDialog" button-text="Create Person">
             <form-single name="CreatePerson" transition="createPerson">
                 <auto-fields-entity entity-name="com.party.Person" field-type="edit"/>
-                <field name="partyId" from="partyId"><default-field>
-                    <text-line size="30"/>
-                </default-field></field>
+                <field name="partyId" from="partyId">
+                    <default-field>
+                        <text-line size="30"/>
+                    </default-field>
+                </field>
                 <field name="submit"><default-field>
                     <submit/>
                 </default-field></field>
