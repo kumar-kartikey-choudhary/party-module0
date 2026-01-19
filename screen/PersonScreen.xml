@@ -7,6 +7,7 @@
         <service-call name="com.services.PersonService.create#Person"/>
         <default-response url="."/>
     </transition>
+
     <actions>
         <!--Entity finds for the screen Person entity-->
         <entity-find entity-name="com.party.Person" list="personList"><search-form-inputs/></entity-find>
