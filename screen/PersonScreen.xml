@@ -15,7 +15,9 @@
         <!--Container for the screen Person entity-->
         <container-dialog id="CreatePersonDialog" button-text="Create Person">
             <form-single name="CreatePerson" transition="createPerson">
+
                 <auto-fields-entity entity-name="com.party.Person" field-type="edit"/>
+
                 <field name="partyId" from="partyId">
                     <default-field>
                         <text-line size="30"/>
