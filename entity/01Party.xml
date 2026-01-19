@@ -18,7 +18,6 @@
 -->
         <relationship type="many" related="PartyContactMech"/>
 
-
         <seed-data>
             <moqui.basic.EnumerationType description="Party Type" enumTypeId="PartyType"/>
             <moqui.basic.Enumeration enumId="PERSON" enumTypeId="PartyType"/>
