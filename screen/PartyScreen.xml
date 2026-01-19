@@ -1,13 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd">
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd"
+        require-authentication="anonymous-all">
     <actions>
-        <entity-find entity-name="com.party.PartyContactMech" list="pContactMechList"><search-form-inputs/></entity-find>
+        <!--Entity finds for the screen Party entity-->
+        <entity-find entity-name="com.party.Party" list="partyList"><search-form-inputs/></entity-find>
+
+        <!--Entity finds for the screen Person entity-->
+        <entity-find entity-name="com.party.Person" list="personList"><search-form-inputs/></entity-find>
+
+        <!--Entity finds for the screen PartyGroup entity-->
+        <entity-find entity-name="com.party.PartyGroup" list="partyGroupList"><search-form-inputs/></entity-find>
+
+        <!--Entity finds for the screen ContactMech entity-->
+        <entity-find entity-name="com.party.ContactMech" list="contactMechList"><search-form-inputs/></entity-find>
+
+        <!--Entity finds for the screen PartyContactMech entity-->
+        <entity-find entity-name="com.party.PartyContactMech" list="partyContactMechList"><search-form-inputs/></entity-find>
     </actions>
     <widgets>
+
+        <!--Container for the screen Party entity-->
+        <container>
+            <label text="Party List" type="h1"/>
+            <form-list name="Party" list="partyList">
+                <field name="partyId">
+                    <header-field title="Party ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="partyTypeEnumId">
+                    <header-field title="Party Type Enum Id" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="createDate">
+                    <header-field title="Create Date" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+            </form-list>
+        </container>
+
+        <!--Container for the screen Person entity-->
+        <container>
+            <label text="Person List" type="h1"/>
+            <form-list name="Person" list="personList">
+                <field name="partyId">
+                    <header-field title="Party ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="firstName">
+                    <header-field title="First Name" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="lastName">
+                    <header-field title="Last Name" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="dateOfBirth">
+                    <header-field title="Date Of Birth" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+            </form-list>
+        </container>
+
+        <!--Container for the screen PartyGroup entity-->
+        <container>
+            <label text="Party Group  List" type="h2"/>
+            <form-list name="PartyGroup" list="partyGroupList">
+                <field name="partyId">
+                    <header-field title="Party ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="groupName">
+                    <header-field title="Group Name" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="description">
+                    <header-field title="Description" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+            </form-list>
+        </container>
+
+        <!--Container for the screen ContactMech entity-->
+        <container>
+            <label text="Contact Mechanism List" type="h2"/>
+            <form-list name="ContactMech" list="contactMechList">
+                <field name="contactMechId">
+                    <header-field title="ContactMech ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="contactMechTypeId">
+                    <header-field title="Contact Mech Type ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="infoString">
+                    <header-field title="Information" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="createDate">
+                    <header-field title="Create Date" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+            </form-list>
+        </container>
+
+        <!--Container for the screen PartyContactMech entity-->
         <container>
             <label text="Party Contact Mechanism List" type="h2"/>
-            <form-list name="PartyContactMech" list="pContactMechList">
+            <form-list name="PartyContactMech" list="partyContactMechList">
                 <field name="partyId">
                     <header-field title="Party ID" show-order-by="true"/>
                     <default-field><display/></default-field>
@@ -18,6 +118,10 @@
                 </field>
                 <field name="fromDate">
                     <header-field title="From Date" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="thruDate">
+                    <header-field title="Through Date" show-order-by="true"/>
                     <default-field><display/></default-field>
                 </field>
             </form-list>

@@ -9,10 +9,19 @@
     <com.party.Party partyId="1003"
                      partyTypeEnumId="PARTY_GROUP"/>
     <com.party.Party partyId="1004"
-                     partyTypeEnumId="PERSON"/>
+                     partyTypeEnumId="PARTY_GROUP"/>
     <com.party.Party partyId="1005"
-                     partyTypeEnumId="PERSON"/>
+                     partyTypeEnumId="PARTY_GROUP"/>
+<!--    <com.party.Party partyId="1007"-->
+<!--                     partyTypeEnumId="PARTY"/>-->
+    <com.party.Party partyId="1008"
+                     partyTypeEnumId="PARTY_GROUP"/>
 
+
+    <com.party.Party1 partyId1="1001"
+                     partyTypeEnumId1="PERSON"/>
+    <com.party.Party1 partyId1="1007"
+                     partyTypeEnumId1="PARTY"/>
 
     <!--    this is our Person entity data -->
     <com.party.Person partyId="1001"
