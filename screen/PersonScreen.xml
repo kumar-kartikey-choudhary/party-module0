@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd"
+        require-authentication="anonymous-all">
+    <actions>
+        <!--Entity finds for the screen Person entity-->
+        <entity-find entity-name="com.party.Person" list="personList"><search-form-inputs/></entity-find>
+    </actions>
+    <widgets>
+        <!--Container for the screen Person entity-->
+        <container>
+            <label text="Person List" type="h1"/>
+            <form-list name="Person" list="personList">
+                <field name="partyId">
+                    <header-field title="Party ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="firstName">
+                    <header-field title="First Name" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="lastName">
+                    <header-field title="Last Name" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="dateOfBirth">
+                    <header-field title="Date Of Birth" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+            </form-list>
+        </container>
+    </widgets>
+</screen>

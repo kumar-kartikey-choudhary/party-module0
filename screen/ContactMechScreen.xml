@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd"
+        require-authentication="anonymous-all">
+
+    <actions>
+        <!--Entity finds for the screen ContactMech entity-->
+        <entity-find entity-name="com.party.ContactMech" list="contactMechList"><search-form-inputs/></entity-find>
+    </actions>
+    <widgets>
+
+        <!--Container for the screen ContactMech entity-->
+        <container>
+            <label text="Contact Mechanism List" type="h2"/>
+            <form-list name="ContactMech" list="contactMechList">
+                <field name="contactMechId">
+                    <header-field title="ContactMech ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="contactMechTypeId">
+                    <header-field title="Contact Mech Type ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="infoString">
+                    <header-field title="Information" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="createDate">
+                    <header-field title="Create Date" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+            </form-list>
+        </container>
+
+    </widgets>
+</screen>
