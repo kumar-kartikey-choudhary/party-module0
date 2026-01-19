@@ -18,11 +18,6 @@
                      partyTypeEnumId="PARTY_GROUP"/>
 
 
-    <com.party.Party1 partyId1="1001"
-                     partyTypeEnumId1="PERSON"/>
-    <com.party.Party1 partyId1="1007"
-                     partyTypeEnumId1="PARTY"/>
-
     <!--    this is our Person entity data -->
     <com.party.Person partyId="1001"
                       firstName="John"
