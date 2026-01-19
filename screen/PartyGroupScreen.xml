@@ -5,7 +5,7 @@
 
     <parameter name="partyId" />
     <transition name="createPartyGroup">
-        <service-call name="create#com.party.PartyGroup" />
+        <service-call name="com.services.PartyGroup.create#PartyGroup" />
         <default-response url="."/>
     </transition>
 

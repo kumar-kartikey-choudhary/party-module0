@@ -4,7 +4,7 @@
         require-authentication="anonymous-all">
 
     <transition name="createParty">
-        <service-call name="create#com.party.Party"/>
+        <service-call name="com.services.PartyService.create#Party"/>
         <actions>
             <if condition="partyTypeEnumId == 'PERSON'">
                 <set field="partyForm" value="/apps/person"/>

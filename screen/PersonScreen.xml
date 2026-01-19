@@ -4,7 +4,7 @@
         require-authentication="anonymous-all">
     <parameter name="partyId" required="true"/>
     <transition name="createPerson">
-        <service-call name="create#com.party.Person"/>
+        <service-call name="com.services.PersonService.create#Person"/>
         <default-response url="."/>
     </transition>
     <actions>

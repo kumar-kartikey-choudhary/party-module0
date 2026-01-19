@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-2.1.xsd">
+
+    <service verb="create" noun="Person" type="inline">
+        <in-parameters>
+            <parameter name="partyId" required="true"/>
+            <parameter name="firstName" required="true"/>
+            <parameter name="lastName" required="true"/>
+            <parameter name="dateOfBirth"/>
+        </in-parameters>
+        <out-parameters>
+            <parameter name="firstName" />
+        </out-parameters>
+        <actions>
+            <entity-make-value entity-name="com.party.Person" value-field="Person"/>
+            <entity-set value-field="Person" include="all"/>
+            <entity-create value-field="Person"/>
+        </actions>
+    </service>
+
+</services>

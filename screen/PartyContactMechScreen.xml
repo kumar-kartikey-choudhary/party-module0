@@ -4,7 +4,7 @@
         require-authentication="anonymous-all">
 
     <transition name="partyContactMech">
-        <service-call name="create#PartyContactMech" />
+        <service-call name="com.services.PartyContactMech.create#PartyContactMech" />
         <default-response url="."/>
     </transition>
 
