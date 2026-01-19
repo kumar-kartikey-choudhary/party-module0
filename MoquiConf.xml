@@ -15,7 +15,6 @@
                              location="component://party/screen/PersonScreen.xml"/>
         </screen>
 
-
         <!--Mount the screen for PartyGroup entity-->
         <screen location="component://webroot/screen/webroot/apps.xml">
             <subscreens-item name="partyGroup" menu-title="Party Group"
@@ -27,7 +26,6 @@
             <subscreens-item name="contactMech" menu-title="Contact Mech"
                              location="component://party/screen/ContactMechScreen.xml"/>
         </screen>
-
 
         <!--Mount the screen for PartyContactMech entity-->
         <screen location="component://webroot/screen/webroot/apps.xml">
