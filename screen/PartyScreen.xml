@@ -2,9 +2,25 @@
 <screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd">
     <actions>
-        <entity-find entity-name="partcontactmech.PartyContactMech"><search-form-inputs/></entity-find>
+        <entity-find entity-name="com.party.PartyContactMech" list="pContactMechList"><search-form-inputs/></entity-find>
     </actions>
     <widgets>
-
+        <container>
+            <label text="Party Contact Mechanism List" type="h2"/>
+            <form-list name="PartyContactMech" list="pContactMechList">
+                <field name="partyId">
+                    <header-field title="Party ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="contactMechId">
+                    <header-field title="Contact Mech ID" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+                <field name="fromDate">
+                    <header-field title="From Date" show-order-by="true"/>
+                    <default-field><display/></default-field>
+                </field>
+            </form-list>
+        </container>
     </widgets>
 </screen>
