@@ -3,6 +3,7 @@
 <entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-2.1.xsd">
 
+<!--    this is aur master entity means it exist completely independent-->
     <entity entity-name="Party" package="com.party">
         <field name="partyId" type="id" is-pk="true"/>
         <field name="partyTypeEnumId" type="id"/>
@@ -15,7 +16,13 @@
 
 <!--       A Party has many Person PartyGroup PartyContactMech...
            When deleting Party deletes all the Person, PartyGroup, PartyContactMech...
+
+
+           Dependent Entities ==> Moqui automatically search for "Reverse Relationships".
+           If Entity A se B tak type="one" relationship hai, toh B se A tak type="many" (dependent) mana jata hai...
 -->
+        <relationship type="many" related="Person"/>
+        <relationship type="many" related="PartyGroup"/>
         <relationship type="many" related="PartyContactMech"/>
 
         <seed-data>
