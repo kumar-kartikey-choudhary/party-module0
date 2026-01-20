@@ -13,10 +13,11 @@
                     this tag tells moqui what and how screen to be added.
                     The name attribute is used to build the URL Path.
                     The text that the user actually sees on the screen or button by menu-title tag
+                    Location = The path to the source file of the screen you are adding
             -->
             <!--Mount the screen for party entity-->
             <subscreens-item name="party" menu-title="Party"
-                             location="component://party/screen/PartyScreen.xml"/><!--The path to the source file of the screen you are adding -->
+                             location="component://party/screen/PartyScreen.xml"/>
 
             <!--Mount the screen for Person entity-->
             <subscreens-item name="person" menu-title="Person"
