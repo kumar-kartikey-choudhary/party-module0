@@ -8,6 +8,7 @@
         <default-response url="."/>
     </transition>
 
+
     <actions>
         <!--Entity finds for the screen PartyGroup entity-->
         <entity-find entity-name="com.party.PartyGroup" list="partyGroupList"><search-form-inputs/></entity-find>
