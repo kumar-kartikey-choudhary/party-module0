@@ -7,7 +7,6 @@ EntityValue party = ec.entity.makeValue("com.party.Party")
 if (!party.partyId) {
     party.setSequencedIdPrimary()
 }
-
 party.setFields(context, true, null, null)
 party.create()
 
