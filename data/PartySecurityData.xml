@@ -14,10 +14,6 @@
                                         artifactTypeEnumId="AT_SERVICE"
                                         inheritAuthz="Y"/>
 
-<!--    <moqui.security.ArtifactGroupMember artifactGroupId="PARTY_MGR"-->
-<!--                                        artifactName="component://party/service/com/services/PersonService.xml"-->
-<!--                                        artifactTypeEnumId="AT_SERVICE"-->
-<!--                                        inheritAuthz="Y"/>-->
 
     <moqui.security.ArtifactAuthz artifactAuthzId="PARTY_ANON_AUTH"
                                   userGroupId="ALL_USERS"
