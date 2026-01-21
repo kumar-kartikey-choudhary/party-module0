@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        require-authentication="anonymous-all">
+    <subscreens default-item="PartyScreen" >
+        <subscreens-item name="PartyScreen" location="component://party/screen/PartyScreen/PartyScreen.xml"/>
+        <subscreens-item name="PersonScreen" location="component://party/screen/PartyScreen/PersonScreen.xml"/>
+        <subscreens-item name="PartyGroupScreen" location="component://party/screen/PartyScreen/PartyGroupScreen.xml"/>
+        <subscreens-item name="ContactMechScreen" location="component://party/screen/PartyScreen/ContactMechScreen.xml"/>
+        <subscreens-item name="PartyContactMechScreen" location="component://party/screen/PartyScreen/PartyContactMechScreen.xml"/>
+    </subscreens>
+    <widgets>
+        <subscreens-menu id="tab" type="tab"/>
+        <subscreens-active/>
+    </widgets>
+</screen>

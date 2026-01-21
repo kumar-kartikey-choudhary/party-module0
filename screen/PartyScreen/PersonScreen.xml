@@ -2,7 +2,7 @@
 <screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd"
         require-authentication="anonymous-all">
-    <parameter name="partyId" required="true"/>
+    <parameter name="partyId"/>
     <transition name="createPerson">
         <service-call name="com.services.PersonService.create#Person"/>
         <default-response url="."/>

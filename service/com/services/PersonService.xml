@@ -4,10 +4,9 @@
 
     <service verb="create" noun="Person" type="inline">
         <in-parameters>
-            <parameter name="partyId" required="true"/>
-            <parameter name="firstName" required="true"/>
-            <parameter name="lastName" required="true"/>
-            <parameter name="middleName"/>
+            <parameter name="partyId" type="String" required="true"/>
+            <parameter name="firstName" type="String" required="true"/>
+            <parameter name="lastName" type="String" required="true"/>
             <parameter name="dateOfBirth" type="Date"/>
         </in-parameters>
         <out-parameters>
