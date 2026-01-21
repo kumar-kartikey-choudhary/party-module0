@@ -4,7 +4,6 @@
           displayName="PartyApi" require-authentication="anonymous-all">
     <resource name="getParty">
         <method type="get">
-<!--            <service name="com.services.PartyService.create#Party"/>-->
             <entity name="com.party.Party" operation="list"/>
         </method>
         
