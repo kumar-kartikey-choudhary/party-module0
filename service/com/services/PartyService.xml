@@ -3,7 +3,7 @@
           xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-2.1.xsd">
 
     <service verb="create" noun="Party" type="script"
-             location="component://party/service/com/services/party/createParty.groovy">
+             location="component://party/script/createParty.groovy">
         <in-parameters>
             <parameter name="partyId"  required="true"/>
             <parameter name="partyTypeEnumId" required="true"/>

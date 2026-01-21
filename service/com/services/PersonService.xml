@@ -14,8 +14,8 @@
         </out-parameters>
         <actions>
             <entity-make-value entity-name="com.party.Person" value-field="person" map="context"/>
-            <entity-create value-field="person"/>
             <set field="partyId" from="person.partyId"/>
+            <entity-create value-field="person"/>
         </actions>
     </service>
 </services>
