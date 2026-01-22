@@ -7,13 +7,14 @@
         <actions>
             <if condition="partyTypeEnumId == 'PERSON'">
                 <set field="partyForm" value="/apps/person"/>
-                <else-if condition="partyTypeEnumId == 'PARTY_GROUP'">
-                    <set field="partyForm" value="/apps/partyGroup"/>
-                    <else>
-                        <set field="partyForm" value="."/>
-                    </else>
-                </else-if>
             </if>
+            <else-if condition="partyTypeEnumId == 'PARTY_GROUP'">
+                <set field="partyForm" value="/apps/partyGroup"/>
+            </else-if>
+            <else>
+                <set field="partyForm" value="."/>
+            </else>
+
         </actions>
         <default-response url="${partyForm}"/>
     </transition>
